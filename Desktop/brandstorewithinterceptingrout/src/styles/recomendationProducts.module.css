@@ -1,0 +1,837 @@
+.sectionRecommend {
+    background: #f9f9f9;
+  }
+  
+  .recommendationProductsWrapper {
+    width: 100%;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 70% 30%);
+  }
+  
+  .recommendationProducts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* gap: 10px; Adjust the gap as needed */
+    /* background-color: aliceblue; */
+  }
+  
+  .recommendationProductsItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(155, 148, 148, 0.66);
+    background: #fff;
+  }
+  .recommendationProductsItem:hover {
+    border: 1px solid #e30909;
+  }
+  
+  .recommendationProductsItem > a {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding: 25px;
+  }
+  
+  .likeLogo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    top: 23px;
+    right: 23px;
+  }
+  
+  .recommendationProductsImage {
+    width: 100%;
+    /* height: 270px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin: auto;
+    /* padding: 0px 18px 0 18px; */
+    padding-top: 18px;
+  }
+  .recommendationProductsImage > img {
+    /* width: 100%; */
+    width: 240px;
+     min-width: 240px;
+      min-height: 240px; 
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
+  
+  .recommendProductInfo,
+  .recommendProductTitle {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .recommendProductTitle {
+    gap: 10px;
+  }
+  
+  .recommendProductTitle > p:first-child {
+    color: #2f2f2f;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .recommendProductTitle > p:nth-child(2) {
+    color: #000322;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-style: normal;
+    /* font-weight: 500; */
+    line-height: normal;
+    text-decoration-line: underline;
+    font-weight: 600;
+    /* >>>>>>>>>>>>>>>>>>>> */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .recommendProductQuantity {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    gap: 6px;
+  }
+  
+  .recommendProductQuantity > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    text-transform: capitalize;
+  }
+  
+  .recommendProductQuantity > p:nth-child(2) {
+    color: #e30909;
+  }
+  
+  .recommendProductPrice {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .recommendProductPrice > div > p:first-child {
+    color: #878787;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22.496px; /* 140.598% */
+  }
+  
+  .recommendProductPrice > div > p:nth-child(2) {
+    color: #000;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 110% */
+  }
+  
+  .recommendProductPrice > button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 10px;
+    background: #e30909;
+    border: none;
+    gap: 5px;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18.45px; /* 115.312% */
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  .recommendProductsSectionAds {
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* border: 1px solid red; */
+  }
+  
+  .recommendProductsSectionAds > div:first-child {
+    background-image: url("../public/ad_bg.png"),
+      linear-gradient(180deg, #f21c22 32.18%, #e73c40 100%);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: contain;
+  }
+  .recommendProductsSectionAds > div:last-child {
+    background-image: url("../public/ad_huawei_bg.png"),
+      linear-gradient(180deg, #111 17%, #232323 100%);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: contain;
+  }
+  
+  .recommendProductsSectionAds > div > a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: end;
+  }
+  .recommendProductsSectionAdsInfo {
+    width: 80%;
+    margin-bottom: 40.8px;
+    margin-left: 47.5px;
+    gap: 9px;
+  }
+  
+  .recommendProductsSectionAdsInfo > p:first-child {
+    display: inline;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    margin-right: 15px;
+  }
+  
+  .recommendProductsSectionAdsInfo > p:first-child > span:first-child {
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+  }
+  
+  .recommendProductsSectionAdsInfo > p:last-child {
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+  
+  
+  @media screen and (max-width: 1450px)  {
+    
+    .recommendationProductsWrapper {
+      margin-top: 50px;
+    }
+    
+    .recommendationProductsItem > a {
+      padding: 20px;
+    }
+    
+    .likeLogo {
+      gap: 10px;
+      top: 20px;
+      right: 20px;
+    }
+    
+    
+    .recommendProductTitle > p:first-child {
+      font-size: 14px;
+    }
+  
+    .recommendProductTitle > p:nth-child(2) {
+      font-size: 18px;
+    }
+    
+    .recommendProductQuantity > p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    
+    
+    .recommendProductPrice > div > p:first-child {
+      font-family: 'Montserrat';
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22.496px; /* 140.598% */
+    }
+    
+    .recommendProductPrice > div > p:nth-child(2) {
+      font-family: 'Montserrat';
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px; /* 110% */
+    }
+    
+    .recommendProductPrice > button {
+      padding: 15px 10px;
+      background: #e30909;
+      gap: 5px;
+      font-family: 'Montserrat';
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 18.45px; /* 115.312% */
+      z-index: 2;
+      cursor: pointer;
+    }
+    
+    .recommendProductsSectionAds {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    
+    .recommendProductsSectionAds > div:first-child {
+      background-image: url("../public/ad_bg.png"),
+        linear-gradient(180deg, #f21c22 32.18%, #e73c40 100%);
+      background-repeat: no-repeat;
+      /* background-position: center; */
+      background-size: contain;
+    }
+    .recommendProductsSectionAds > div:last-child {
+      background-image: url("../public/ad_huawei_bg.png"),
+        linear-gradient(180deg, #111 17%, #232323 100%);
+      background-repeat: no-repeat;
+      /* background-position: center; */
+      background-size: contain;
+    }
+    
+    .recommendProductsSectionAds > div > a {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: end;
+    }
+    .recommendProductsSectionAdsInfo {
+      width: 80%;
+      margin-bottom: 40.8px;
+      margin-left: 47.5px;
+      gap: 9px;
+    }
+    
+    .recommendProductsSectionAdsInfo > p:first-child {
+      display: inline;
+      color: #fff;
+      font-family: 'Montserrat';
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+      margin-right: 15px;
+    }
+    
+    .recommendProductsSectionAdsInfo > p:first-child > span:first-child {
+      color: #fff;
+      font-family: 'Montserrat';
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-decoration-line: underline;
+    }
+    
+    .recommendProductsSectionAdsInfo > p:last-child {
+      color: #fff;
+      font-family: 'Montserrat';
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 150% */
+      margin-top: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 1350px) {
+    .recommendationProductsWrapper {
+      width: 100%;
+      margin-top: 50px;
+      display: grid;
+    grid-template-columns: repeat(2, 70% 30%);
+    }
+  
+    .likeLogo {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      top: 20px;
+      right: 18px;
+    }
+  
+    .recommendationProductsImage {
+      padding: 10px 15px 0px;
+    }
+  
+    .recommendationProductsImage > img {
+      width: 100%;
+      min-width:auto ;
+      min-height: auto;
+    }
+  
+  
+    .recommendProductTitle > p:first-child {
+      font-size: 14px;
+    }
+  
+    .recommendProductTitle > p:nth-child(2) {
+      font-size: 15px;
+    }
+    
+    .recommendProductQuantity > p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  
+    .recommendProductPrice > div > p:first-child {
+      font-family: 'Montserrat';
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 22.496px; /* 140.598% */
+    }
+    
+    .recommendProductPrice > div > p:nth-child(2) {
+      font-family: 'Montserrat';
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 20px; /* 110% */
+    }
+  
+  
+  
+    .recommendProductPrice {
+      width: 100%;
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .recommendProductPrice > button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 8px;
+      background: #e30909;
+      border: none;
+      gap: 5px;
+      color: #fff;
+      font-family: 'Montserrat';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18.45px; /* 115.312% */
+      z-index: 2;
+      cursor: pointer;
+    }
+  
+  }
+  
+  @media screen and (max-width: 1250px) {
+    .recommendationProductsWrapper {
+      margin-top: 40px;
+      grid-template-columns: repeat(2, 75% 25%);
+    }
+  
+    .recommendationProductsItem > a {
+      padding: 18px;
+    }
+  
+    .likeLogo {
+      gap: 5px;
+    }
+  
+    .recommendationProductsImage {
+      padding: 0px 15px;
+    }
+  
+    .recommendProductsSectionAdsInfo {
+      width: 80%;
+      margin-bottom: 35.8px;
+      margin-left: 40.5px;
+      gap: 7px;
+    }
+  
+    .recommendProductsSectionAdsInfo > p:first-child {
+      font-size: 30px;
+      font-weight: 400;
+      margin-right: 10px;
+    }
+    
+    .recommendProductsSectionAdsInfo > p:first-child > span:first-child {
+      font-size: 30px;
+      font-weight: 700;
+    }
+  
+    .recommendProductsSectionAdsInfo > p:last-child {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px; /* 150% */
+      margin-top: 10px;
+    }
+  }
+  
+  
+  
+  @media screen and (max-width: 1200px) {
+    .recommendationProductsWrapper {
+      width: 100%;
+      grid-template-columns:  1fr;
+    }
+  
+    .recommendationProducts {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      /* gap: 10px; Adjust the gap as needed */
+      /* background-color: aliceblue; */
+    }
+  
+    .recommendationProductsItem > a {
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      padding: 25px;
+    }
+  
+    .likeLogo {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      top: 23px;
+      right: 23px;
+    }
+  
+    .recommendationProductsImage {
+      width: 100%;
+      /* height: 270px; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      margin: auto;
+      /* padding: 0px 18px 0 18px; */
+      padding-top: 18px;
+    }
+  
+    .recommendationProductsImage > img {
+      /* width: 100%; */
+      width: 240px;
+       min-width: 240px;
+        min-height: 240px; 
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
+  
+    .recommendProductTitle {
+      gap: 10px;
+    }
+  
+    .recommendProductTitle > p:first-child {
+      color: #2f2f2f;
+      font-family: 'Montserrat';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .recommendProductTitle > p:nth-child(2) {
+      color: #000322;
+      font-family: 'Montserrat';
+      font-size: 18px;
+      font-style: normal;
+      /* font-weight: 500; */
+      line-height: normal;
+      text-decoration-line: underline;
+      font-weight: 600;
+      /* >>>>>>>>>>>>>>>>>>>> */
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  
+    .recommendProductQuantity {
+      display: flex;
+      align-items: center;
+      margin-top: 6px;
+      gap: 6px;
+    }
+    
+    .recommendProductQuantity > p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #000000;
+      text-transform: capitalize;
+    }
+  
+    .recommendProductPrice {
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .recommendProductPrice > div > p:first-child {
+      color: #878787;
+      font-family: 'Montserrat';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22.496px; /* 140.598% */
+    }
+    
+    .recommendProductPrice > div > p:nth-child(2) {
+      color: #000;
+      font-family: 'Montserrat';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px; /* 110% */
+    }
+    
+    .recommendProductPrice > button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 10px;
+      background: #e30909;
+      border: none;
+      gap: 5px;
+      color: #fff;
+      font-family: 'Montserrat';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18.45px; /* 115.312% */
+      z-index: 2;
+      cursor: pointer;
+    }
+  
+    .recommendProductsSectionAds {
+     display: none;
+    }
+  }
+  
+  @media screen and (max-width: 1050px) {
+    .recommendationProductsItem > a {
+      padding: 20px;
+    }
+    
+    .likeLogo {
+      gap: 7px;
+      top: 20px;
+      right: 18px;
+    }
+  
+    .recommendationProductsImage {
+      padding: 0px 15px;
+    }
+  
+    .recommendationProductsImage > img {
+      width: 100%;
+      min-width:auto ;
+      min-height: auto;
+    }
+    
+    
+    .recommendProductTitle > p:first-child {
+      font-size: 14px;
+    }
+  
+    .recommendProductTitle > p:nth-child(2) {
+      font-size: 18px;
+    }
+    
+    .recommendProductQuantity > p {
+      font-size: 16px;
+    }
+    
+    
+    .recommendProductPrice > div > p:first-child {
+      font-size: 14px;
+    }
+    
+    .recommendProductPrice > div > p:nth-child(2) {
+      font-size: 16px;
+      line-height: 20px; /* 110% */
+    }
+    
+    .recommendProductPrice > button {
+      padding: 15px 10px;
+      gap: 5px;
+      font-size: 15px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 940px) {
+    .recommendationProductsWrapper {
+      margin-top: 40px;
+    }
+    
+    .recommendationProductsItem > a {
+      padding: 18px;
+    }
+  
+    .likeLogo {
+      gap: 5px;
+    }
+  
+    .recommendationProductsImage {
+      padding: 0px 15px;
+    }
+  
+    .recommendProductTitle > p:nth-child(2) {
+      font-size: 15px;
+    }
+    
+    .recommendProductQuantity > p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  
+    .recommendProductPrice > div > p:first-child {
+      font-family: 'Montserrat';
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 22.496px; /* 140.598% */
+    }
+    
+    .recommendProductPrice > div > p:nth-child(2) {
+      font-family: 'Montserrat';
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 20px; /* 110% */
+    }
+  
+  
+  
+    .recommendProductPrice {
+      width: 100%;
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .recommendProductPrice > button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 8px;
+      background: #e30909;
+      border: none;
+      gap: 5px;
+      color: #fff;
+      font-family: 'Montserrat';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18.45px; /* 115.312% */
+      z-index: 2;
+      cursor: pointer;
+    }
+  }
+  
+  @media screen and (max-width: 940px) {
+    .recommendationProductsWrapper {
+      margin-top: 25px;
+      grid-template-columns: unset!important;
+    }
+    
+    .recommendationProducts {
+      display: flex;
+      overflow-x: auto;
+    }
+  
+    .recommendationProductsImage > img {
+      /* width: 100%; */
+      width: 240px;
+       min-width: 240px;
+        min-height: 240px; 
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
+    
+    .recommendProductTitle > p:first-child {
+      font-size: 14px;
+    }
+  
+    .recommendProductTitle > p:nth-child(2) {
+      font-size: 15px;
+    }
+    
+    .recommendProductQuantity > p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  
+    .recommendProductPrice > div > p:first-child {
+      font-family: 'Montserrat';
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 22.496px; /* 140.598% */
+    }
+    
+    .recommendProductPrice > div > p:nth-child(2) {
+      font-family: 'Montserrat';
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 20px; /* 110% */
+    }
+  
+  
+    .recommendProductPrice {
+      width: 100%;
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .recommendProductPrice > button {
+      padding: 11px 9px;
+      gap: 5px;
+      font-size: 16px;
+    }
+  }
+ 
+  
+  @media screen and (max-width: 450px) {
+   .recommendationProductsImage>img {
+      width: 215px;
+      min-width: 215px;
+      min-height: 215px;
+    }
+      .recommendationProductsImage {
+      padding: 15px;
+    } 
+  }
