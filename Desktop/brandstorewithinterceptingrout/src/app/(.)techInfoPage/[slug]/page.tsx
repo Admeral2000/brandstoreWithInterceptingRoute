@@ -42,17 +42,17 @@ export default function PhotoModal({
 
   return (
     <Modal>
-      <Image src={productData.images[0].url} alt={productData.name} width={500} height={500} />
+      <Image src={productData.images[0].url} alt={productData.name} className='max-xl:max-w-72' width={500} height={500} />
 
-      <div className='flex flex-col gap-2 py-8 pr-8'>
-      <div className='flex flex-col gap-2'>
+      <div className='flex flex-col gap-2 py-8 pr-8 max-xl:py-5 max-xl:pr-5'>
+      <div className='flex flex-col gap-2 max-xl:text-xl'>
         <h2>{productData.name}</h2>
         <p>{productData.class.name}</p>
-        <p>Narxi: {productData.random_shop.price} сум</p>
+        <p>{productData.random_shop.discount.price} сум</p>
         </div>
         <div className='flex justify-end pt-8'>
           <Link className='text-2xl text-white bg-red-500  py-2 px-4 rounded-md hover:bg-red-600 
-      max-w-max' href={productData.web_url} target="_blank" rel="noopener noreferrer">
+      max-w-max  max-xl:text-xl  max-xl:' href={productData.web_url} target="_blank" rel="noopener noreferrer">
             Batafsil ma'lumot
           </Link>
         </div>

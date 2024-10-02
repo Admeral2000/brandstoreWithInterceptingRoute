@@ -30,6 +30,15 @@ export default function RecommendationProducts() {
         });
     }, []);
 
+    if (!data) return <div className='fixed inset-0 bg-black/50 flex items-center justify-center z-50'> <div
+    className=" inline-block h-14 w-14 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-primary-100 motion-reduce:animate-[spin_1.5s_linear_infinite]"
+    role="status">
+    <span
+      className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span>
+  </div>
+  </div>;
+
     return (
   
          <section className={`${cls.sectionBrands} ${stl.sectionHotProducts}`}>
@@ -80,8 +89,9 @@ export default function RecommendationProducts() {
 
                 <div className={`${style.recommendProductPrice} ${stl.hotProductPriceInfo}`}>
                           <div>
-                            <p>{item.random_shop.monthly_price} сум / мес.</p>
-                            <p>{item.random_shop.price} сум</p>
+                            <p>{item.random_shop.price}  сум / мес.</p>
+                            <p>{item.random_shop.discount.price} сум</p>
+
                           </div>
                           <button>
                             <span hidden='hidden'>
